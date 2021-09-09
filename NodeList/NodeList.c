@@ -20,21 +20,21 @@ Status Display(LinkList L)
 
 Status InitList(LinkList* L)
 { 
-	*L = (LinkList)malloc(sizeof(Node));   // ²úÉúÍ·½Úµã
+	*L = (LinkList)malloc(sizeof(Node));   // äº§ç”Ÿå¤´èŠ‚ç‚¹
 
 	if ((*L) == NULL)
 	{
 		return ERROR;
 	}
 
-	(*L)->next = NULL;                    // ½¨Á¢¿ÕÁ´±í
+	(*L)->next = NULL;                    // å»ºç«‹ç©ºé“¾è¡¨
 
 	return OK;
 }
 
 int ListLength(LinkList L)
 {
-	LinkList p = L;     // Ö¸ÏòµÚÒ»¸ö½Úµã
+	LinkList p = L;     // æŒ‡å‘å¤´èŠ‚ç‚¹
 	int i = 0;
 	while (p->next != NULL)
 	{
@@ -67,9 +67,9 @@ Status ClearList(LinkList* L)
 Status GetElem(LinkList L, int i, ElemType *pe)
 {
 	int j = 0;
-	LinkList p = L;      // Ö¸ÏòÍ·½áµã
+	LinkList p = L->next;      // æŒ‡å‘ç¬¬ä¸€ä¸ªèŠ‚ç‚¹
 
-	for (j = 0; p->next != NULL && j < i; j++)
+	for (j = 0; p != NULL && j < i; j++)
 	{
 		p = p->next;
 	}
@@ -165,7 +165,7 @@ Status CreateListHead(LinkList* L, int n)
 
 	if ((*L) == NULL)
 	{
-		return ERROR;   //¿Õ¼ä¿ª±ÙÊ§°Ü
+		return ERROR;   //ç©ºé—´å¼€è¾Ÿå¤±è´¥
 	}
 	else
 	{
@@ -202,11 +202,11 @@ Status CreateListTail(LinkList* L,int n)
 	
 	if ((*L) == NULL)
 	{
-		return ERROR;   //¿Õ¼ä¿ª±ÙÊ§°Ü
+		return ERROR;   //ç©ºé—´å¼€è¾Ÿå¤±è´¥
 	}
 	else
 	{
-		r = *L;         //  rÖ¸ÏòÏßĞÔ±íÎ²²¿
+		r = *L;         //  ræŒ‡å‘çº¿æ€§è¡¨å°¾éƒ¨
 	}
 
 	for (i = 1; i < n; i++)
