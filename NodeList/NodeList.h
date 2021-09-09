@@ -1,3 +1,5 @@
+// 线性表的链式存储结构
+
 # include <stdio.h>
 # include <stdlib.h>
 # include <time.h>
