@@ -1,3 +1,5 @@
+// 循环链表2
+
 #include <stdio.h>
 #include <stdlib.h>
 
