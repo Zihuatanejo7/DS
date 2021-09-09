@@ -1,4 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS 1
+
 # include "NodeList.h"
 
 static void visit(ElemType e)
