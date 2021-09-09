@@ -1,6 +1,8 @@
+//  çº¿æ€§è¡¨çš„çº¿æ€§å­˜å‚¨ç»“æ„
+
 # include <stdio.h>
 
-# define MAXSIZE 30      //ÏßĞÔ±í×î´ó´æ´¢ÈİÁ¿
+# define MAXSIZE 30      //çº¿æ€§è¡¨æœ€å¤§å­˜å‚¨å®¹é‡
 
 # define OK 1
 # define ERROR 0
@@ -9,41 +11,41 @@
 
 typedef int Status;
 
-typedef int ElemType;      // ±íÖĞÔªËØÊµ¼ÊÀàĞÍ
+typedef int ElemType;      // è¡¨ä¸­å…ƒç´ å®é™…ç±»å‹
 
 typedef struct
 {
-	ElemType data[MAXSIZE];     // data: ±íÄÚÊ×ÔªËØµØÖ·
-	int length;                 // length£º µ±Ç°±íµÄ³¤¶È
+	ElemType data[MAXSIZE];     // data: è¡¨å†…é¦–å…ƒç´ åœ°å€
+	int length;                 // lengthï¼š å½“å‰è¡¨çš„é•¿åº¦
 }Sqlist;
 
 
-// ³õÊ¼»¯º¯Êı
+// åˆå§‹åŒ–å‡½æ•°
 Status InitList(Sqlist* L);
 
-// ²åÈëÔªËØ
+// æ’å…¥å…ƒç´ 
 Status InsertList(Sqlist* L, int i, ElemType e);
 
-// »ñµÃÔªËØ
+// è·å¾—å…ƒç´ 
 Status GetElem(Sqlist L, int i,ElemType* pe);
 
-// ÏÔÊ¾ÔªËØ
+// æ˜¾ç¤ºå…ƒç´ 
 Status DisplayList(Sqlist L);
 
-// ÅĞ¶ÏÊÇ·ñÎª¿Õ±í
+// åˆ¤æ–­æ˜¯å¦ä¸ºç©ºè¡¨
 Status ListEmpty(Sqlist L);
 
-// Çå¿ÕÏßĞÔ±í
+// æ¸…ç©ºçº¿æ€§è¡¨
 Status ClearList(Sqlist* L);
 
-// ¶¨Î»ÌØ¶¨ÔªËØ
+// å®šä½ç‰¹å®šå…ƒç´ 
 Status LocateElem(Sqlist L, ElemType e);
 
-// ·µ»Ø±í³¤
+// è¿”å›è¡¨é•¿
 int ListLength(Sqlist L);
 
-// É¾³ıÔªËØ
+// åˆ é™¤å…ƒç´ 
 Status ListDelete(Sqlist* L, int i, ElemType* pe);
 
-// ºÏ²¢ÔªËØ
+// åˆå¹¶å…ƒç´ 
 Status UnionList(Sqlist* La, Sqlist Lb);
