@@ -1,0 +1,5 @@
+﻿  KMP.c
+C:\Users\Administrator\Desktop\3KMP\KMP.c(12,22): warning C4267: “=”: 从“size_t”转换到“char”，可能丢失数据
+  test.c
+  正在生成代码...
+  KMP.vcxproj -> C:\Users\Administrator\Desktop\3KMP\Debug\KMP.exe
