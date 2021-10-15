@@ -11,7 +11,9 @@ int BinarySearch(vector<int> v, int value , int low, int high)
 	while (low <= high) 
 	{
 		int mid = low + (high - low) / 2;
-		if (v[mid] == value) {
+
+		if (v[mid] == value) 
+		{
 			return mid;
 		}
 		else if (v[mid] > value) {
@@ -29,12 +31,21 @@ int BinarySearch(vector<int> v, int value , int low, int high)
 int BinarySearch2(vector<int> v, int value, int low, int high)
 {
 	if (low > high)
+	{
 		return -1;
+	}
 	int mid = low + (high - low) / 2;
+
 	if (v[mid] == value)
+	{
 		return mid;
+	}
 	else if (v[mid] > value)
+	{
 		return BinarySearch2(v, value, low, mid - 1);
+	}	
 	else
+	{
 		return BinarySearch2(v, value, mid + 1, high);
+	}	
 }
